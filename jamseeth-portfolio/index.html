@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamseeth Iwana | UI/UX Design &amp; Web Development</title>
+  <meta name="description" content="Portfolio of Jamseeth Iwana, Year 2 Diploma in IT student at Singapore Polytechnic focused on UI/UX design and web development.">
+
+  <!-- Fonts: Kurale (headings, matches the Canva slides) + Hind (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Reusable botanical line drawings (used with <use href="#...">) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="flower" viewBox="0 0 200 200">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M100 100 C80 70 78 35 100 18 C122 35 120 70 100 100Z"/>
+          <path d="M100 100 C80 70 78 35 100 18 C122 35 120 70 100 100Z" transform="rotate(60 100 100)"/>
+          <path d="M100 100 C80 70 78 35 100 18 C122 35 120 70 100 100Z" transform="rotate(120 100 100)"/>
+          <path d="M100 100 C80 70 78 35 100 18 C122 35 120 70 100 100Z" transform="rotate(180 100 100)"/>
+          <path d="M100 100 C80 70 78 35 100 18 C122 35 120 70 100 100Z" transform="rotate(240 100 100)"/>
+          <path d="M100 100 C80 70 78 35 100 18 C122 35 120 70 100 100Z" transform="rotate(300 100 100)"/>
+          <path d="M100 88 L100 40 M100 88 L94 58 M100 88 L106 58" />
+          <path d="M100 88 L100 40 M100 88 L94 58 M100 88 L106 58" transform="rotate(120 100 100)"/>
+          <path d="M100 88 L100 40 M100 88 L94 58 M100 88 L106 58" transform="rotate(240 100 100)"/>
+          <circle cx="100" cy="100" r="13"/>
+          <circle cx="100" cy="100" r="5"/>
+        </g>
+      </symbol>
+      <symbol id="sprig" viewBox="0 0 220 120">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 110 C60 90 120 60 215 12"/>
+          <path d="M45 95 C40 75 52 60 70 58 C70 78 60 90 45 95Z"/>
+          <path d="M60 89 C75 98 92 96 102 84 C86 74 70 78 60 89Z"/>
+          <path d="M100 72 C96 50 108 36 128 34 C128 54 116 68 100 72Z"/>
+          <path d="M118 64 C134 72 152 70 160 56 C144 48 128 52 118 64Z"/>
+          <path d="M155 45 C152 28 162 16 180 14 C180 30 170 42 155 45Z"/>
+          <path d="M53 92 L64 64 M68 88 L94 84 M108 68 L122 40 M126 62 L152 58 M162 42 L174 20"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">Jamseeth<span>.</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <svg class="deco deco--hero-top"><use href="#flower"/></svg>
+      <svg class="deco deco--hero-sprig"><use href="#sprig"/></svg>
+      <svg class="deco deco--hero-bottom"><use href="#flower"/></svg>
+
+      <div class="band band--hero">
+        <p class="hero__eyebrow">Portfolio</p>
+        <h1 class="hero__title">Jamseeth Iwana</h1>
+        <p class="hero__role">I'm a <span class="typed" id="typed">UI/UX Designer</span><span class="caret">|</span></p>
+      </div>
+
+      <p class="hero__intro">Year 2 IT student at Singapore Polytechnic, designing user-centred digital experiences that are both functional and beautiful.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View my work</a>
+        <a href="assets/Jamseeth_Iwana_Resume.pdf" class="btn btn--ghost" download>Download resume</a>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__photo reveal">
+          <div class="photo-frame">
+            <img src="images/profile.jpg" alt="Portrait of Jamseeth Iwana" data-fallback="JI">
+          </div>
+        </div>
+        <div class="about__text reveal">
+          <h2 class="section-title">Introduction</h2>
+          <p>Hi, I'm <strong>Jamseeth Iwana</strong>, a Year 2 Diploma in Information Technology student at Singapore Polytechnic with a strong interest in UI/UX design and web development.</p>
+          <p>I enjoy creating user-centred digital experiences that are both functional and visually appealing. Through academic projects, I've gained experience in user research, interface design, responsive web development and prototyping.</p>
+          <p>I'm currently seeking opportunities to further develop my UI/UX skills and contribute to real-world projects in a collaborative environment.</p>
+          <ul class="stats">
+            <li><span class="stats__num" data-count="6">0</span><span class="stats__label">Projects</span></li>
+            <li><span class="stats__num" data-count="3">0</span><span class="stats__label">Certifications</span></li>
+            <li><span class="stats__num" data-count="4">0</span><span class="stats__label">Leadership roles</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section projects" id="projects">
+      <svg class="deco deco--projects"><use href="#sprig"/></svg>
+      <div class="container">
+        <h2 class="section-title section-title--center reveal">Projects</h2>
+        <div class="filters reveal" role="tablist" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="design">Design</button>
+          <button class="filter" data-filter="dev">Development</button>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- To add a project: copy one <article> block and change the text + image -->
+          <article class="card reveal" data-category="dev">
+            <div class="card__media">
+              <img src="images/gigboard.png" alt="GigBoard web app screens" data-fallback="GigBoard">
+              <span class="card__tag">Team project</span>
+            </div>
+            <div class="card__body">
+              <p class="card__date">Nov 2026</p>
+              <h3 class="card__title">GigBoard</h3>
+              <p class="card__subtitle">Student Gig-Job Web App</p>
+              <p>Built the job application and ratings feature for a student gig platform, including logic that updates an existing rating when people work together again instead of creating duplicates.</p>
+              <ul class="chips"><li>Git</li><li>CI/CD</li><li>Teamwork</li></ul>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="design">
+            <div class="card__media">
+              <img src="images/iwana-portfolio.png" alt="iwana portfolio website design" data-fallback="iwana" class="img-top">
+              <span class="card__tag card__tag--grade">Grade A</span>
+            </div>
+            <div class="card__body">
+              <p class="card__date">Aug 2026</p>
+              <h3 class="card__title">“iwana” Portfolio Website</h3>
+              <p class="card__subtitle">Web &amp; Visual Design</p>
+              <p>A personal portfolio site designed in Photoshop with a “Botanical Editorial” visual direction: a cohesive layout, type and colour system built around a personal brand.</p>
+              <ul class="chips"><li>Adobe Photoshop</li><li>Layout</li><li>Typography</li></ul>
+              <button class="card__link" data-gallery="images/iwana-portfolio.png" data-caption="“iwana” portfolio website design (Adobe Photoshop)">View full design →</button>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="design">
+            <div class="card__media">
+              <img src="images/charles-keith.jpg" alt="Charles &amp; Keith Walk Your Story poster" data-fallback="C&amp;K">
+              <span class="card__tag card__tag--grade">Grade B+</span>
+            </div>
+            <div class="card__body">
+              <p class="card__date">May 2026</p>
+              <h3 class="card__title">Charles &amp; Keith Poster Campaign</h3>
+              <p class="card__subtitle">Branding &amp; Visual Design</p>
+              <p>A promotional campaign themed “Timeless Loyalty”, combining branding, typography, colour harmony and photo manipulation to tell an emotional brand story.</p>
+              <ul class="chips"><li>Adobe Photoshop</li><li>Branding</li><li>Photo manipulation</li></ul>
+              <button class="card__link" data-gallery="images/ck-1.jpg|images/ck-2.jpg" data-caption="Charles &amp; Keith “Walk Your Story” campaign">View posters →</button>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="dev">
+            <div class="card__media">
+              <img src="images/eco-cadets.jpg" alt="Eco-Cadets dashboard and challenges pages" data-fallback="Eco-Cadets">
+              <span class="card__tag">Full-stack</span>
+            </div>
+            <div class="card__body">
+              <p class="card__date">Jan 2026</p>
+              <h3 class="card__title">Eco-Cadets</h3>
+              <p class="card__subtitle">Sustainability Platform</p>
+              <p>A full-stack site where users track eco-friendly activities, with a gamification system of points, badges and challenges. Built RESTful APIs with CRUD operations on MySQL.</p>
+              <ul class="chips"><li>JavaScript</li><li>REST API</li><li>MySQL</li><li>Postman</li></ul>
+              <div class="card__links">
+                <button class="card__link" data-gallery="images/eco-1.jpg|images/eco-2.jpg|images/eco-3.jpg" data-caption="Eco-Cadets: login, dashboard and challenges">View screens →</button>
+                <a class="card__link" href="https://youtu.be/mOmBFpfwRPU" target="_blank" rel="noopener">Watch demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="design">
+            <div class="card__media">
+              <img src="images/cognify.jpg" alt="Cognify annotated wireframes" data-fallback="Cognify">
+              <span class="card__tag">Wireframes</span>
+            </div>
+            <div class="card__body">
+              <p class="card__date">Nov 2025</p>
+              <h3 class="card__title">Cognify</h3>
+              <p class="card__subtitle">AI Study Planner App</p>
+              <p>Annotated wireframes for an AI-powered study planner: a low-friction sign-in flow with Google/Apple SSO and a dashboard with a colour-coded calendar, AI plan generator and friends feature.</p>
+              <ul class="chips"><li>Figma</li><li>User flows</li><li>Information architecture</li></ul>
+              <button class="card__link" data-gallery="images/cognify-1.jpg|images/cognify-2.jpg" data-caption="Cognify annotated wireframes">View wireframes →</button>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="dev design">
+            <div class="card__media">
+              <img src="images/youthrise.jpg" alt="YouthRise website on laptop and phone" data-fallback="YouthRise">
+              <span class="card__tag">Responsive</span>
+            </div>
+            <div class="card__body">
+              <p class="card__date">Aug 2025</p>
+              <h3 class="card__title">YouthRise</h3>
+              <p class="card__subtitle">Youth Empowerment Website</p>
+              <p>A responsive site that guides visitors toward key actions like “Join Community”. Praised by my lecturer for its use of colour and hierarchy to make calls-to-action stand out.</p>
+              <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <button class="card__link" data-gallery="images/youthrise-1.jpg|images/youthrise-2.jpg" data-caption="YouthRise: laptop and phone views">View screens →</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section-title section-title--center reveal">Experience</h2>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <p class="tl-item__date">Sep 2026 – Present</p>
+            <h3>Community Engagement Volunteer</h3>
+            <p class="tl-item__org">Health Promotion Board (HPB)</p>
+            <p>Engaged hawkers and the public for a healthier food options campaign, promoting healthier eating habits.</p>
+          </div>
+          <div class="tl-item reveal">
+            <p class="tl-item__date">Jul 2026 – Present</p>
+            <h3>Publicity &amp; Event Management</h3>
+            <p class="tl-item__org">Global Youth Leadership Development Council (GYLDC)</p>
+            <p>Created promotional materials, coordinated event communications and supported community and youth engagement events.</p>
+          </div>
+          <div class="tl-item reveal">
+            <p class="tl-item__date">2025</p>
+            <h3>Class Chairperson</h3>
+            <p class="tl-item__org">Singapore Polytechnic</p>
+            <p>Coordinated communication between lecturers and classmates and managed class matters.</p>
+          </div>
+          <div class="tl-item reveal">
+            <p class="tl-item__date">Jan 2025 – Feb 2025</p>
+            <h3>Customer Service Assistant</h3>
+            <p class="tl-item__org">BHG</p>
+            <p>Helped customers in a fast-paced retail environment, building insight into customer behaviour and user needs.</p>
+          </div>
+          <div class="tl-item reveal">
+            <p class="tl-item__date">Dec 2024 – Present</p>
+            <h3>Freelance Web Development Assistant</h3>
+            <p class="tl-item__org">Tutor4Me.sg (Remote)</p>
+            <p>Assisted in website development using PHP and WordPress, and supported WhatsApp API integration features.</p>
+          </div>
+          <div class="tl-item reveal">
+            <p class="tl-item__date">2023 – 2024</p>
+            <h3>English Drama Club, EXCO</h3>
+            <p class="tl-item__org">Bendemeer Secondary School</p>
+            <p>Coordinated costume management for SYF productions under tight deadlines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section skills" id="skills">
+      <svg class="deco deco--skills"><use href="#flower"/></svg>
+      <div class="container">
+        <h2 class="section-title section-title--center reveal">Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-card reveal">
+            <span class="skill-card__num">01</span>
+            <h3>User-Centred Design</h3>
+            <ul>
+              <li>Conduct user research and identify needs</li>
+              <li>Create personas and user journeys</li>
+              <li>Design intuitive, accessible interfaces</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-card__num">02</span>
+            <h3>Prototyping &amp; Wireframing</h3>
+            <ul>
+              <li>Low and high-fidelity wireframes</li>
+              <li>Interactive prototypes</li>
+              <li>Responsive design principles</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-card__num">03</span>
+            <h3>Collaboration &amp; Communication</h3>
+            <ul>
+              <li>Work in cross-functional teams</li>
+              <li>Present ideas and gather feedback</li>
+              <li>Adapt to user and stakeholder needs</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="tools-title reveal">Tools I use</h3>
+        <ul class="tools reveal">
+          <li>Figma</li><li>Adobe Photoshop</li><li>Canva</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+          <li>MySQL</li><li>REST APIs</li><li>Postman</li><li>Git</li><li>WordPress</li>
+        </ul>
+
+        <div class="edu-cert">
+          <div class="edu reveal">
+            <h3>Education</h3>
+            <p class="edu__title">Diploma in Information Technology</p>
+            <p class="edu__meta">Singapore Polytechnic · 2025 – 2028</p>
+            <p>Coursework: Design for User Interaction, Front-End &amp; Backend Web Development, Database Systems, Secure Coding.</p>
+          </div>
+          <div class="edu reveal">
+            <h3>Certifications</h3>
+            <ul class="cert-list">
+              <li><span>JavaScript for Web Designers</span><em>LinkedIn Learning</em></li>
+              <li><span>Bootstrap 5 Essential Training</span><em>LinkedIn Learning</em></li>
+              <li><span>Google Ads for Beginners</span><em>Coursera</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonial + Reflection ===== -->
+    <section class="section quotes">
+      <div class="band band--quote reveal">
+        <p class="quote__label">Testimonial</p>
+        <blockquote>“Jamseeth is a highly dedicated and proactive individual who consistently demonstrates strong initiative in group settings.”</blockquote>
+        <p class="quote__by">Grace Wong, classmate &amp; project teammate, Singapore Polytechnic</p>
+      </div>
+      <div class="container reflection reveal">
+        <h2 class="section-title section-title--center">Personal Reflection</h2>
+        <p>Working on these projects taught me that good design is never really “finished”. It's a process of testing, listening to feedback and refining. Eco-Cadets pushed me to think beyond visuals into how a system actually functions, while the Charles &amp; Keith campaign reminded me how much emotional storytelling matters. Next time, I want to run structured user testing earlier instead of relying mainly on lecturer feedback. UI/UX is a skill I'll keep sharpening with every project.</p>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact">
+      <svg class="deco deco--contact-l"><use href="#flower"/></svg>
+      <svg class="deco deco--contact-r"><use href="#sprig"/></svg>
+      <div class="container contact__inner reveal">
+        <h2 class="section-title section-title--center">Contact Me!</h2>
+        <p class="contact__lead">Open to internships and UI/UX opportunities. Let's create something meaningful together.</p>
+        <div class="contact__list">
+          <button class="contact__item" id="copyEmail" data-email="jamseethiwana@gmail.com">
+            <span class="contact__icon">✉</span>
+            <span>jamseethiwana@gmail.com</span>
+            <span class="contact__hint" id="copyHint">Click to copy</span>
+          </button>
+          <a class="contact__item" href="https://www.linkedin.com/in/jamseeth-iwana/" target="_blank" rel="noopener">
+            <span class="contact__icon">in</span>
+            <span>linkedin.com/in/jamseeth-iwana</span>
+          </a>
+          <a class="contact__item" href="tel:+6582585014">
+            <span class="contact__icon">☏</span>
+            <span>+65 8258 5014</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="band band--footer">
+      <p>Thank You</p>
+    </div>
+    <p class="footer__note">© <span id="year"></span> Jamseeth Iwana · Designed &amp; built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <!-- Lightbox: opens a full-size image when a "View full design" button is clicked -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full design preview" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+    <figure class="lightbox__inner">
+      <img id="lightboxImg" src="" alt="">
+      <figcaption><span id="lightboxCaption"></span> <span class="lightbox__count" id="lightboxCount"></span></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next image">›</button>
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
